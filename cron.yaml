@@ -1,0 +1,81 @@
+cron:
+
+- url: /tasks/bigben
+  schedule: every day 01:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 07:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 08:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 09:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 10:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 11:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 12:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 13:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 14:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 15:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 16:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 17:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 18:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 19:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 20:00
+  timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 21:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 22:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/bigben
+  schedule: every day 23:00
+  timezone: Asia/Shanghai
+
+-  url: /tasks/bigben
+   schedule: every day 0:00
+   timezone: Asia/Shanghai
+
+- url: /tasks/weather
+  schedule: every day 20:00
+  timezone: Asia/Shanghai

@@ -1,0 +1,23 @@
+application: rs-bigben
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  script: main.py
+
+- url: /index\.html
+  script: main.py
+
+- url: /tasks/weather
+  script: sinapi_2.py
+  login: admin
+
+- url: /tasks/bigben
+  script: sinapi_3.py
+  login: admin
+
+- url: /tasks/twitter
+  script: test.py
+  login: admin
