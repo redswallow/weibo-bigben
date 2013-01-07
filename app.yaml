@@ -15,7 +15,7 @@ handlers:
   login: admin
 
 - url: /tasks/bigben
-  script: sinapi_3.py
+  script: bigben.py
   login: admin
 
 - url: /tasks/twitter
