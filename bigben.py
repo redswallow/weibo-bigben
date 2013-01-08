@@ -64,8 +64,10 @@ message=message+u" 现在是红吞吞扮演的陈萌萌附体的爱菜酱不靠�
 #update_status
 message = message.encode("utf-8")
 if (h==12)or(h==18)or(h==22):
-    img="img/eat"+str(random.randint(1,13))+".jpg"
-    client.post.statuses__update(status=message,pic=open(img))
+    img="img/eat"+str(random.randint(1,13))+".jpeg"
+    f=open(img,'rb')
+    client.upload.statuses__upload(status=message,pic=f)
+    f.close()
 else:
     client.post.statuses__update(status=message)
     print "update: "+ message
