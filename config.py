@@ -26,8 +26,6 @@ class Config(object):
         self.app = dict(self._config.items('app'))
         self.token = dict(self._config.items('token'))
         self.message = dict(self._config.items('message'))
-        print self.token,self.message['1']
-        
 
     def load_config(self,filename):
         try:  
@@ -39,3 +37,4 @@ class Config(object):
 
 if __name__=='__main__':
     c=Config()
+    print c.app
