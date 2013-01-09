@@ -26,10 +26,10 @@ message+=c.message[sh]
 message=message+c.message['clock']%(sh)
 #update_status
 if (h==12)or(h==18)or(h==22):
-    img="img/eat"+str(random.randint(1,13))+".jpeg"
+    img="img/eat%s.jpeg" %(str(random.randint(1,13)))
     f=open(img,'rb')
     client.upload.statuses__upload(status=message,pic=f)
     f.close()
 else:
     client.post.statuses__update(status=message)
-    print "update: "+ message
+    print message
