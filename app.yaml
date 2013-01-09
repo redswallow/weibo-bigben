@@ -8,7 +8,7 @@ handlers:
   script: main.py
 
 - url: /index\.html
-  script: main.py
+  script: web/main.py
 
 - url: /tasks/weather
   script: weather.py
