@@ -1,18 +1,22 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
+from weibo import APIClient
 import urllib2
 import simplejson as json
 import time
-from weibopy.auth import OAuthHandler
-from weibopy.api import API
 
 #config
-consumer_key="222922387";consumer_secret ="9377bf8ef403aca32cd465d684fbbcaf"
-#get through PIN:auth.get_authorization_url() auth.get_access_token()
-token="9100f587b83fa3fae48cd93bab3981ca";tokenSecret="3f6e772d7767540fcd0bb4deb223576c"
-#get_api
-auth=OAuthHandler(consumer_key,consumer_secret)
-auth.setToken(token, tokenSecret)
-api=API(auth)
+APP_KEY = '1037673549' # app key
+APP_SECRET = '79c0a909c1a9a48c882e6cde07fdc230' # app secret
+CALLBACK_URL = 'http://www.example.com/callback' # callback url
+
+client = APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK_URL)
+code = 'acea5bfeb04ca56da6e4e54711e1c30f'
+r={'access_token': u'2.00WbtgYCJSyNIB378e4f5ca1vnGxAD', 'expires': 1515254019, 'expires_in': 1515254019, 'uid': u'2344884610'}
+access_token = u'2.00WbtgYCJSyNIB378e4f5ca1vnGxAD'#r.access_token 
+expires_in = 1515254019#r.expires_in 
+client.set_access_token(access_token, expires_in)
+
 #get_weather
 citycode='101020100'
 url='http://m.weather.com.cn/data/'+citycode+'.html'
@@ -26,6 +30,4 @@ message=u'吞吞robot不靠谱地提醒您，明天是'+date+','+weeks[week]+','
 +data[u'city']+u'天气'+data[u'weather2']+','+data[u'temp2']+','+data[u'wind2']+'~'+data[u'index_d']
 #update_status
 message = message.encode("utf-8")
-status = api.update_status(message)
-print status.__getattribute__('id')
-print "update: "+ message
+client.post.statuses__update(status=message)

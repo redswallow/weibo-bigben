@@ -11,7 +11,7 @@ handlers:
   script: main.py
 
 - url: /tasks/weather
-  script: sinapi_2.py
+  script: weather.py
   login: admin
 
 - url: /tasks/bigben
