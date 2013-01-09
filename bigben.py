@@ -17,7 +17,7 @@ client.set_access_token(c.token["access_token"], c.token["expires_in"])
 
 message=''
 #get_hour
-sh=time.strftime("%H", time.localtime(time.time() + 8 * 60 * 60))
+sh=time.strftime("%H", time.localtime(time.time() + int(c.time['timezone']) * 60 * 60))
 h=int(sh)
 #create message
 for i in xrange(h):
@@ -25,8 +25,8 @@ for i in xrange(h):
 message+=c.message[sh]
 message=message+c.message['clock']%(sh)
 #update_status
-if (h==12)or(h==18)or(h==22):
-    img="img/eat%s.jpeg" %(str(random.randint(1,13)))
+if hs in set(c.time['pictime'].split('|')):
+    img=c.img['imgpath'] %(str(random.randint(1,int(c.img['imgnum']))))
     f=open(img,'rb')
     client.upload.statuses__upload(status=message,pic=f)
     f.close()

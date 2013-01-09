@@ -12,6 +12,8 @@ class Config(object):
         self.app={}
         self.token={}
         self.message={}
+        self.img={}
+        self.time={}
         self.load(filename)
 
     def __parse_settings(self):
@@ -26,6 +28,8 @@ class Config(object):
         self.app = dict(self._config.items('app'))
         self.token = dict(self._config.items('token'))
         self.message = dict(self._config.items('message'))
+        self.img = dict(self._config.items('img'))
+        self.time = dict(self._config.items('time'))
 
     def load_config(self,filename):
         try:  
