@@ -25,7 +25,7 @@ for i in xrange(h):
 message+=c.message[sh]
 message=message+c.message['clock']%(sh)
 #update_status
-if hs in set(c.time['pictime'].split('|')):
+if sh in set(c.time['pictime'].split('|')):
     img=c.img['imgpath'] %(str(random.randint(1,int(c.img['imgnum']))))
     f=open(img,'rb')
     client.upload.statuses__upload(status=message,pic=f)
