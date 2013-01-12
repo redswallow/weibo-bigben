@@ -28,7 +28,10 @@ message=message+c.message['clock']%(sh)
 if sh in set(c.time['pictime'].split('|')):
     img=c.img['imgpath'] %(str(random.randint(1,int(c.img['imgnum']))))
     f=open(img,'rb')
-    client.upload.statuses__upload(status=message,pic=f)
+    try:
+        client.upload.statuses__upload(status=message,pic=f)
+    except:
+        client.post.statuses__update(status=message)
     f.close()
 else:
     client.post.statuses__update(status=message)
