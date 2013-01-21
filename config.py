@@ -31,6 +31,10 @@ class Config(object):
         self.img = dict(self._config.items('img'))
         self.time = dict(self._config.items('time'))
 
+    def update_since_id(self,id):
+        self._config.set('message','since_id',str(id))
+        self._config.write(open(self.filename, "w")) 
+
     def load_config(self,filename):
         try:  
             if os.path.exists(filename):  
@@ -41,4 +45,5 @@ class Config(object):
 
 if __name__=='__main__':
     c=Config()
-    print c.app
+    c.update_since_id(3461259603398515)
+    print c.message['since_id']

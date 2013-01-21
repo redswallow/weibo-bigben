@@ -18,6 +18,10 @@ handlers:
   script: bigben.py
   login: admin
 
+- url: /tasks/chat
+  script: chat.py
+  login: admin
+
 - url: /tasks/twitter
   script: test.py
   login: admin
