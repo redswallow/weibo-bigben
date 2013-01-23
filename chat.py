@@ -19,7 +19,7 @@ client.set_access_token(c.token["access_token"], c.token["expires_in"])
 message=''
 bot = simsimi.SimSimi()
 def chatting_task():
-    since_id = MessageConfig().newest()
+    since_id = MessageConfig().all().order('-since_id').get().since_id
     print 'old since_id=%s'%since_id
     comments=client.get.comments__to_me(since_id=since_id,filter_by_author=0)
 
