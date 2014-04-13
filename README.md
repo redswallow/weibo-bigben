@@ -7,6 +7,7 @@ rs-bigben
 ## 演示:
 吞吞不靠谱报时 http://weibo.com/u/2344884610
  
+![吞吞不靠谱报时](http://pic.yupoo.com/redswallow_v/D4ttzPEC/vXY3I.png "吞吞不靠谱报时")
 
 ## 安装部署:
 
