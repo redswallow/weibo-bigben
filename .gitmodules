@@ -1,0 +1,3 @@
+[submodule "sinaweibopy"]
+	path = sinaweibopy
+	url = https://github.com/michaelliao/sinaweibopy.git
