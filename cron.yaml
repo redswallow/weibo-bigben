@@ -1,9 +1,5 @@
 cron:
 
-- url: /tasks/chat
-  schedule: every 2 hours
-  timezone: Asia/Shanghai
-
 - url: /tasks/bigben
   schedule: every day 07:00
   timezone: Asia/Shanghai
@@ -74,8 +70,4 @@ cron:
 
 - url: /tasks/bigben
   schedule: every day 0:00
-  timezone: Asia/Shanghai
-
-- url: /tasks/weather
-  schedule: every day 20:00
   timezone: Asia/Shanghai

@@ -1,5 +1,5 @@
 application: weibo-bigben
-version: 1
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: false
@@ -11,18 +11,6 @@ handlers:
 - url: /index\.html
   script: web/main.py
 
-- url: /tasks/weather
-  script: weather.py
-  login: admin
-
 - url: /tasks/bigben
   script: bigben.py
-  login: admin
-
-- url: /tasks/chat
-  script: chat.py
-  login: admin
-
-- url: /tasks/twitter
-  script: test.py
   login: admin
