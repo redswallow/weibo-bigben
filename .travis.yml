@@ -4,4 +4,4 @@ python:
 install:
   - pip install pep8 --use-mirrors
 script:
-  - pep8 --exclude=lib,vendor.py,appengine_config.py .
+  - pep8 --exclude=lib,tests,sinaweibopy .
